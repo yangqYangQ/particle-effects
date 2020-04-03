@@ -1,0 +1,49 @@
+.page {
+  :global {
+    h1 {
+      color: white;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px auto;
+
+      .wrapper {
+        width: 30vw;
+        height: 30vw;
+        margin: 20px;
+        background: linear-gradient(120deg, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          cursor: pointer;
+          padding: 20px;
+          background-color: black;
+          color: white;
+          outline: none;
+          border-radius: 15px;
+          border-width: 0;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .particles {
+      div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
