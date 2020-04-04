@@ -46,7 +46,7 @@ class Draggable extends Component {
                         onMouseMove={this.onMouseMove}
                         style={{left: deltaX, top: deltaY}}
                 >
-                    drag me outside the bounds
+                    拖动粒子效果待完善
                 </button>
             </div>
         );

@@ -156,7 +156,7 @@ class BasicButtons extends Component {
             width: ${width}px;
             height: ${height}px;
             animation: ${frame} ${duration}ms cubic-bezier(0, .9, .57, 1) 0s;
-            background-image: url("/vendors/mario-face.png");
+            background-image: url("./vendors/mario-face.png");
         `;
 
         return (

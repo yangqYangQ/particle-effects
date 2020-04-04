@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95ccb8c1326abf904404301723070f6a",
+    "revision": "84d004f788e81ef2185f548248c8be0c",
     "url": "/particle-effects/build/index.html"
   },
   {
-    "revision": "f5cc54a412177c5025f8",
+    "revision": "a75637f38540b20f0d15",
     "url": "/particle-effects/build/static/css/main.248cd17d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/particle-effects/build/static/js/2.44f3f56e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f5cc54a412177c5025f8",
-    "url": "/particle-effects/build/static/js/main.f118c8eb.chunk.js"
+    "revision": "a75637f38540b20f0d15",
+    "url": "/particle-effects/build/static/js/main.c14abf29.chunk.js"
   },
   {
     "revision": "d8436fffb0d127b359b9",
