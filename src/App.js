@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BasicButtons from './BasicButtons';
+import Draggable from './Draggable';
 import styles from './App.module.scss';
 
 class App extends Component {
@@ -7,7 +8,10 @@ class App extends Component {
         return (
             <div className={styles.page}>
                 <h1>React Particle Effects</h1>
-                <BasicButtons/>
+                <div className="content">
+                    <BasicButtons/>
+                    <Draggable/>
+                </div>
             </div>
         );
     }

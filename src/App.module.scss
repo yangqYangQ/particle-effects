@@ -6,32 +6,49 @@
       margin: 40px 0;
     }
 
-    .buttons-wrapper {
-      .buttons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 20px auto;
+    .content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px auto;
 
-        .wrapper {
-          width: 30vw;
-          height: 30vw;
-          margin: 20px;
+      .button-wrapper {
+        width: 30vw;
+        height: 30vw;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          cursor: pointer;
+          padding: 20px;
+          outline: none;
+          border-radius: 15px;
+          border-width: 0;
+          font-size: 1.2em;
+        }
+
+        &.basic {
           background: linear-gradient(120deg, rgb(168, 237, 234) 0%, rgb(254, 214, 227) 100%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
 
           button {
-            cursor: pointer;
-            padding: 20px;
             background-color: black;
             color: white;
-            outline: none;
-            border-radius: 15px;
-            border-width: 0;
-            font-size: 1.2em;
+          }
+        }
+
+        &.draggable {
+          background: linear-gradient(120deg, rgb(127, 84, 230), rgb(63, 81, 181));
+          position: relative;
+
+          button {
+            background: rgb(243, 243, 243);
+            color: rgb(60, 46, 158);
+            position: absolute;
+            width: 300px;
+            padding: 20px 0;
           }
         }
       }

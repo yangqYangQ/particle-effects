@@ -6,7 +6,6 @@ class BasicButtons extends Component {
         super(props);
         this.state = {
             amount: 0,
-            showParticle: false,
             type: '',
             clientX: 0,
             clientY: 0
@@ -22,8 +21,7 @@ class BasicButtons extends Component {
             type,
             amount,
             clientY,
-            clientX,
-            showParticle: true
+            clientX
         });
     };
 
@@ -32,8 +30,7 @@ class BasicButtons extends Component {
             type: '',
             amount: 0,
             clientX: 0,
-            clientY: 0,
-            showParticle: false
+            clientY: 0
         });
     };
 
@@ -159,7 +156,7 @@ class BasicButtons extends Component {
             width: ${width}px;
             height: ${height}px;
             animation: ${frame} ${duration}ms cubic-bezier(0, .9, .57, 1) 0s;
-            background-image: url('//i.loli.net/2020/04/04/IQbmYT5hMZtODqJ.png');
+            background-image: url("/vendors/mario-face.png");
         `;
 
         return (
@@ -232,31 +229,27 @@ class BasicButtons extends Component {
     };
 
     render() {
-        const {amount, showParticle} = this.state;
+        const {amount} = this.state;
 
         return (
-            <div className='buttons-wrapper'>
-                <div className="buttons">
+            <>
+
+                {
+                    ['primary', 'square', 'emoji', 'mario', 'shadow', 'line'].map((type, index) =>
+                        <div className="button-wrapper basic" key={index}>
+                            <button data-type={type} onClick={this.pop}>{type} particles</button>
+                        </div>
+                    )
+                }
+
+                <div className="particles">
                     {
-                        ['primary', 'square', 'emoji', 'mario', 'shadow', 'line'].map((type, index) =>
-                            <div className="wrapper" key={index}>
-                                <button data-type={type} onClick={this.pop}>{type} particles</button>
-                            </div>
+                        Array.from({length: amount}).map((_, index) =>
+                            this[`${this.state.type}Particle`](index)
                         )
                     }
                 </div>
-
-                {
-                    showParticle ?
-                        <div className="particles">
-                            {
-                                Array.from({length: amount}).map((_, index) =>
-                                    this[`${this.state.type}Particle`](index)
-                                )
-                            }
-                        </div> : null
-                }
-            </div>
+            </>
         );
     }
 }
